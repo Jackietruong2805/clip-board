@@ -26,7 +26,6 @@ const handleCloseTab = () => {
 </script>
 <template>
   <div class="w-[600px] mx-auto mt-10">
-    {{ searchText }}
     <div class="p-3 max-w-[500px] mx-auto h-[500px] bg-gray-200 rounded-md">
       <div class="max-w-[400px] h-full mx-auto relative">
         <h1 class="text-2xl font-bold mt-5">Welcome to CopyMe</h1>
