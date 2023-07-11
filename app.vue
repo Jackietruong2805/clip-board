@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from 'vue';
+import { ref, watch } from 'vue';
 import { Clipboard } from '@capacitor/clipboard';
 const searchText = ref('');
 const copyText = ref('');
@@ -12,7 +12,6 @@ const writeToClipboard = async (newValue) => {
   });
 };
 
-
 const checkClipboard = async () => {
   const { value } = await Clipboard.read();
   copyText.value = value;
@@ -22,6 +21,14 @@ const handleCloseTab = () => {
   copyText.value = ''
   searchText.value = ''
 };
+
+watch(copyText, async (newText, oldText) => {
+  if (newText) {
+    setTimeout(() => {
+      copyText.value = ''
+    }, 2000)
+  }
+});
 
 </script>
 <template>
