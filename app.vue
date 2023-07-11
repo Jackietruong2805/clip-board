@@ -19,7 +19,6 @@ const checkClipboard = async () => {
 
 const handleCloseTab = () => {
   copyText.value = ''
-  searchText.value = ''
 };
 
 watch(copyText, async (newText, oldText) => {
