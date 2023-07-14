@@ -21,7 +21,7 @@ const handleCloseTab = () => {
   copyText.value = ''
 };
 
-watch(copyText, async (newText, oldText) => {
+watch(copyText, async (newText) => {
   if (newText) {
     setTimeout(() => {
       copyText.value = ''
@@ -31,13 +31,15 @@ watch(copyText, async (newText, oldText) => {
 
 </script>
 <template>
-  <div class="w-[600px] mx-auto mt-10">
-    <div class="p-3 max-w-[500px] mx-auto h-[500px] bg-gray-200 rounded-md">
+  <div class="md:w-[600px] w-[450px] mx-auto mt-10">
+    <div class="md:p-3 p-4 md:max-w-[500px] max-w-[420px] mx-auto h-[500px] bg-gray-200 rounded-md">
       <div class="max-w-[400px] h-full mx-auto relative">
-        <h1 class="text-2xl font-bold mt-5">Welcome to CopyMe</h1>
+        <h1 class="md:text-xl text-lg font-bold mt-5">Welcome to CopyMe</h1>
         <div class="flex items-center bg-white mt-4">
           <Input :modelValue="searchText" @update:modelValue="newValue => writeToClipboard(newValue)" />
-          <button @click="checkClipboard" class="bg-blue-500 py-2 px-3 text-white font-semibold h-[50px]">Copy</button>
+          <button @click="checkClipboard"
+            class="md:py-2 md:px-3 md:text-base text-sm py-1 px-2 text-white font-semibold h-[50px] cursor-pointer"
+            :class="searchText ? 'bg-blue-500' : 'bg-blue-300'" :disabled="!searchText">Copy</button>
         </div>
         <div v-if="copyText" class="absolute flex bottom-10 w-[400px]">
           <div class="flex-1 w-full bg-white text-black p-3">Copied</div>

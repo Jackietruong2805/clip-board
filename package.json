@@ -6,13 +6,15 @@
     "dev": "set NODE_TLS_REJECT_UNAUTHORIZED=0&&npx nuxi dev --https --ssl-cert localhost.pem --ssl-key localhost-key.pem --clipboard true",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "cypress:open": "cypress open"
   },
   "devDependencies": {
     "@invictus.codes/nuxt-vuetify": "^0.2.23",
     "@nuxt/devtools": "latest",
     "@nuxtjs/tailwindcss": "^6.8.0",
     "@types/node": "^18",
+    "cypress": "^12.17.1",
     "nuxt": "^3.6.2"
   },
   "dependencies": {
