@@ -31,8 +31,8 @@ watch(copyText, async (newText) => {
 
 </script>
 <template>
-  <div class="md:w-[600px] w-[450px] mx-auto mt-10">
-    <div class="md:p-3 p-4 md:max-w-[500px] max-w-[420px] mx-auto h-[500px] bg-gray-200 rounded-md">
+  <div class="md:w-[600px] sm:w-[450px] w-[350px] mx-auto mt-10">
+    <div class="md:p-3 p-4 md:max-w-[500px] sm:max-w-[420px] max-w-[320px] mx-auto h-[500px] bg-gray-200 rounded-md">
       <div class="max-w-[400px] h-full mx-auto relative">
         <h1 class="md:text-xl text-lg font-bold mt-5">Welcome to CopyMe</h1>
         <div class="flex items-center bg-white mt-4">
