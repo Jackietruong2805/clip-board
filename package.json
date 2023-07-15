@@ -12,20 +12,21 @@
   "devDependencies": {
     "@invictus.codes/nuxt-vuetify": "^0.2.23",
     "@nuxt/devtools": "latest",
+    "@nuxtjs/ionic": "^0.12.1",
     "@nuxtjs/tailwindcss": "^6.8.0",
     "@types/node": "^18",
     "cypress": "^12.17.1",
     "nuxt": "^3.6.2"
   },
   "dependencies": {
-    "@capacitor/android": "5.1.1",
-    "@capacitor/app": "5.0.5",
-    "@capacitor/cli": "5.1.1",
+    "@capacitor/android": "5.2.1",
+    "@capacitor/app": "5.0.6",
+    "@capacitor/cli": "5.2.1",
     "@capacitor/clipboard": "^5.0.5",
-    "@capacitor/core": "5.1.1",
-    "@capacitor/haptics": "5.0.5",
-    "@capacitor/keyboard": "5.0.5",
-    "@capacitor/status-bar": "5.0.5",
+    "@capacitor/core": "5.2.1",
+    "@capacitor/haptics": "5.0.6",
+    "@capacitor/keyboard": "5.0.6",
+    "@capacitor/status-bar": "5.0.6",
     "wrap-ansi": "7.0.0"
   },
   "version": "0.0.0"

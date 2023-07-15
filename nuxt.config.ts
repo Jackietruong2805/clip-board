@@ -2,5 +2,9 @@
 export default defineNuxtConfig({
   ssr: false,
   devtools: { enabled: true },
-  modules: ["@invictus.codes/nuxt-vuetify", "@nuxtjs/tailwindcss"],
+  modules: [
+    "@nuxtjs/ionic",
+    "@invictus.codes/nuxt-vuetify",
+    "@nuxtjs/tailwindcss",
+  ],
 });
