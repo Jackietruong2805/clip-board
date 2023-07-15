@@ -8,15 +8,10 @@ const searchText = ref('');
 const copyText = ref('');
 
 const writeToClipboard = async (newValue) => {
-  searchText.value = newValue
   await Clipboard.write({
     string: newValue
   });
-};
-
-const checkClipboard = async () => {
-  const { value } = await Clipboard.read();
-  copyText.value = value;
+  copyText.value = newValue;
 };
 
 const handleCloseTab = () => {
@@ -40,8 +35,8 @@ watch(copyText, async (newText) => {
           <div class="max-w-[400px] h-full mx-auto relative">
             <h1 class="md:text-xl text-lg font-bold mt-5">Welcome to CopyMe</h1>
             <div class="flex items-center bg-white mt-4">
-              <Input :modelValue="searchText" @update:modelValue="newValue => writeToClipboard(newValue)" />
-              <button @click="checkClipboard" data-cy="copy"
+              <Input :modelValue="searchText" @update:modelValue="newValue => searchText = newValue" />
+              <button @click="() => writeToClipboard(searchText)" data-cy="copy"
                 class="md:py-2 md:px-3 md:text-base text-sm py-1 px-2 text-white font-semibold h-[50px] cursor-pointer"
                 :class="searchText ? 'bg-blue-500' : 'bg-blue-300'" :disabled="!searchText">Copy</button>
             </div>
