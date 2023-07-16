@@ -1,7 +1,7 @@
 {
   "appId": "nuxt.app",
   "appName": "nuxt-app",
-  "webDir": ".output/public",
+  "webDir": "dist",
   "server": {
     "androidScheme": "https"
   }
