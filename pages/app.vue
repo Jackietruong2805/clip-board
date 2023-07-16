@@ -40,7 +40,7 @@ watch(copyText, async (newText) => {
                 class="md:py-2 md:px-3 md:text-base text-sm py-1 px-2 text-white font-semibold h-[50px] cursor-pointer"
                 :class="searchText ? 'bg-blue-500' : 'bg-blue-300'" :disabled="!searchText">Copy</button>
             </div>
-            <div v-if="copyText" class="absolute flex bottom-10 w-[400px]">
+            <div v-if="copyText" class="absolute flex bottom-10 md:w-[400px] sm:w-[380px] w-[290px]">
               <div class="flex-1 w-full bg-white text-black p-3">Copied</div>
               <div class="bg-black text-white px-[22px] p-3 cursor-pointer font-semibold" @click="handleCloseTab">Ok</div>
             </div>
